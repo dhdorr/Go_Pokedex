@@ -49,7 +49,7 @@ func TestAddCache(t *testing.T) {
 }
 
 func TestReap(t *testing.T) {
-	interval := time.Millisecond * 100
+	interval := time.Millisecond * 10
 	cache := NewCache(interval)
 
 	keyOne := "key1"
