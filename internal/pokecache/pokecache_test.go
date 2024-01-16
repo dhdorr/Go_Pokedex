@@ -49,13 +49,13 @@ func TestAddCache(t *testing.T) {
 }
 
 func TestReap(t *testing.T) {
-	interval := time.Millisecond * 10
+	interval := time.Millisecond * 100
 	cache := NewCache(interval)
 
 	keyOne := "key1"
 	cache.Add(keyOne, []byte("val1"))
 
-	time.Sleep(interval + time.Millisecond)
+	time.Sleep(interval + 4*time.Millisecond)
 
 	_, ok := cache.Get(keyOne)
 	if ok {
